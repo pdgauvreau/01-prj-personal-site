@@ -1,0 +1,38 @@
+/* --- The Fun Stuff Section Styles (Dark Theme) --- */
+
+#fun {
+  background: rgba(255,255,255,0.05); /* Subtle dark overlay */
+  padding: 2em 1em;
+  margin: 2em 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#fun h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.fun-category {
+  margin-bottom: 1.5em;
+  padding: 1em;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.fun-category h3 {
+  color: #00ff88;
+  margin-bottom: 0.5em;
+}
+
+.fun-category ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.fun-category p, .fun-category li {
+  color: #fff;
+  font-size: 1em;
+}
