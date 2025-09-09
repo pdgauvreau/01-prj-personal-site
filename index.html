@@ -79,14 +79,40 @@
         <div class="bio">
             <div class="bio-content">
                 <div class="bio-image">
-                    👨‍💻
+                      <div class="bio-image">
+                        <img src="img/pfp.jpg" alt="My photo" style="width:100px; height:auto;">
+                    </div>
                 </div>
                 <div class="bio-text">
-                    <p>Hey! I'm a passionate web developer currently pursuing my studies in software development at the University of Utah. I love creating digital experiences that combine functionality with a hint of fun abstract design.</p>
+                    <p>Hey, welcome to my website! I'm a passionate web developer currently pursuing my studies in software development at the University of Utah. I love creating digital experiences that combine functionality with a hint of fun abstract design.</p>
                     <p>My journey into web development began with a curiosity for coding and a passion for art, and has evolved into a deep appreciation for user experience, and innovative problem-solving.</p>
                     <p>When I'm not coding, you can find me exploring new technologies, playing beach volleyball, or watching football.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- The Fun Stuff Section -->
+    <section id="fun" class="fade-in">
+        <h2>The Fun Stuff</h2>
+        <!-- Top 3 Songs -->
+        <div class="fun-category">
+            <h3>My Top 3 Songs Right Now</h3>
+            <ol>
+                <li>Song Title 1 - Artist 1</li>
+                <li>Song Title 2 - Artist 2</li>
+                <li>Song Title 3 - Artist 3</li>
+            </ol>
+        </div>
+        <!-- Most Recently Listened Podcast -->
+        <div class="fun-category">
+            <h3>Most Recently Listened Podcast</h3>
+            <p>Podcast Name - Episode Title</p>
+        </div>
+        <!-- Favorite Game -->
+        <div class="fun-category">
+            <h3>Game I'm Most Into Right Now</h3>
+            <p>Game Title</p>
         </div>
     </section>
 
@@ -117,6 +143,8 @@
         </div>
     </section>
 
+    
+
     <!-- Footer -->
     <footer>
         <div class="social-links">
@@ -125,27 +153,11 @@
             <a href="#" class="social-link">🐱</a>
             <a href="#" class="social-link">🐦</a>
         </div>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Paul Gauvreau. All rights reserved.</p>
     </footer>
 
     <script>
-        // Visitor counter animation
-        function animateCounter() {
-            const counter = document.getElementById('count');
-            const target = 1247;
-            let current = 1000;
-            const increment = Math.ceil((target - current) / 50);
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                counter.textContent = current.toLocaleString();
-            }, 50);
-        }
-
+        
         // Scroll animations
         function handleScrollAnimations() {
             const elements = document.querySelectorAll('.fade-in');
