@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. David Gauvreau - Portfolio</title>
     <!-- Link to the CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -124,19 +129,13 @@
             <a href="#" class="social-link">🐱</a>
             <a href="#" class="social-link">🐦</a>
         </div>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Paul Gauvreau. All rights reserved.</p>
     </footer>
 
     <script>
-
         // Scroll animations
         function handleScrollAnimations() {
             const elements = document.querySelectorAll('.fade-in');
-            
-            // First make all elements hidden
-            elements.forEach(element => {
-                element.classList.add('hidden');
-            });
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -170,13 +169,9 @@
 
         // Initialize everything when page loads
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(animateCounter, 1000);
             handleScrollAnimations();
             setupSmoothScrolling();
         });
-
-        // Add nav background on scroll - removed since nav is now fixed vertically
-        // Navigation is now always visible in a fixed position
     </script>
 </body>
 </html>
