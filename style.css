@@ -297,12 +297,12 @@ h2::after {
     letter-spacing: 1px;
 }
 
-/* Songs Grid */
+/* Songs Grid - Keep songs in a row */
 .songs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .song-item {
@@ -335,6 +335,14 @@ h2::after {
     height: 200px;
 }
 
+/* Podcast and Book Grid - Side by side in second row */
+.podcast-book-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
 /* Podcast Section */
 .podcast-item {
     background: rgba(255, 255, 255, 0.05);
@@ -351,8 +359,17 @@ h2::after {
     border-color: rgba(0, 255, 136, 0.3);
 }
 
+.podcast-item h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #00ff88;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 .podcast-item h4 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: #fff;
     font-weight: 400;
@@ -361,16 +378,12 @@ h2::after {
 .podcast-item iframe {
     border-radius: 10px;
     width: 100%;
-    max-width: 560px;
-    height: 315px;
+    max-width: 400px;
+    height: 250px;
 }
 
 /* Book Section */
 .book-item {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 3rem;
-    align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -384,11 +397,28 @@ h2::after {
     border-color: rgba(0, 255, 136, 0.3);
 }
 
+.book-item h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: #00ff88;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
 .book-cover img {
-    width: 100%;
-    max-width: 180px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -397,14 +427,14 @@ h2::after {
 }
 
 .book-info h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: #00ff88;
+    color: #fff;
     font-weight: 400;
 }
 
 .book-author {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #888;
     margin-bottom: 1rem;
     font-style: italic;
@@ -412,28 +442,38 @@ h2::after {
 
 .book-description {
     color: #ccc;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 /* Responsive adjustments for fun section */
+@media (max-width: 1024px) {
+    .songs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .podcast-book-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .songs-grid {
         grid-template-columns: 1fr;
     }
     
-    .podcast-item iframe {
-        height: 250px;
-    }
-    
-    .book-item {
+    .podcast-book-grid {
         grid-template-columns: 1fr;
-        text-align: center;
         gap: 2rem;
     }
     
-    .book-cover {
-        justify-self: center;
+    .podcast-item iframe {
+        height: 200px;
+    }
+    
+    .book-content {
+        gap: 1rem;
     }
 }
 
