@@ -264,6 +264,7 @@ h2::after {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    object-fit:cover;
 }
 
 .bio-image::before {
