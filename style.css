@@ -255,8 +255,6 @@ h2::after {
 }
 
 .bio-image {
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     background: linear-gradient(135deg, #00ff88, #ff6464);
     display: flex;
