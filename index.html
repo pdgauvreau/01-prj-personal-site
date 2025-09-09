@@ -1,3 +1,7 @@
+<head>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <!-- Navigation -->
     <nav>
@@ -12,11 +16,8 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <h1>Your Name</h1>
-            <p>Full Stack Developer & Creative Coder</p>
-        </div>
-        <div class="visitor-count">
-            Visitors: <span id="count">1,247</span>
+            <h1>P. David Gauvreau</h1>
+            <p>Undergrad @ University of Utah, Software Developer</p>
         </div>
     </section>
 
@@ -80,9 +81,9 @@
                     👨‍💻
                 </div>
                 <div class="bio-text">
-                    <p>Hello! I'm a passionate web developer currently pursuing my studies in web development. I love creating digital experiences that combine functionality with beautiful design.</p>
-                    <p>My journey into web development began with curiosity about how websites work, and has evolved into a deep appreciation for clean code, user experience, and innovative problem-solving.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while sketching out my next big idea.</p>
+                    <p>Hey, welcome to my website! I'm a passionate student currently pursuing software development at the University of Utah. I love creating digital experiences that combine functionality with beautiful abstract design.</p>
+                    <p>My journey into web development began with curiosity about coding and a passion for art. It has evolved into a deep appreciation for user experience, and innovative problem-solving.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, playing volleyball, or watching redzone football.</p>
                 </div>
             </div>
         </div>
@@ -127,22 +128,6 @@
     </footer>
 
     <script>
-        // Visitor counter animation
-        function animateCounter() {
-            const counter = document.getElementById('count');
-            const target = 1247;
-            let current = 1000;
-            const increment = Math.ceil((target - current) / 50);
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                counter.textContent = current.toLocaleString();
-            }, 50);
-        }
 
         // Scroll animations
         function handleScrollAnimations() {
