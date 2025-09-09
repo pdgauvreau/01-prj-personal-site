@@ -1,11 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <!-- Add your HTML content here -->
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Your Name</h1>
+            <p>Full Stack Developer & Creative Coder</p>
+        </div>
+        <div class="visitor-count">
+            Visitors: <span id="count">1,247</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A modern web application built with React and Node.js, featuring real-time data visualization and responsive design.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">CSS3</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Live Demo</a>
+                    <a href="#" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>An e-commerce platform with advanced filtering, payment integration, and admin dashboard functionality.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Stripe API</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Live Demo</a>
+                    <a href="#" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>A mobile-first progressive web app for task management with offline capabilities and push notifications.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PWA</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Service Workers</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Live Demo</a>
+                    <a href="#" class="project-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="bio" class="fade-in">
+        <h2>Bio</h2>
+        <div class="bio">
+            <div class="bio-content">
+                <div class="bio-image">
+                    👨‍💻
+                </div>
+                <div class="bio-text">
+                    <p>Hello! I'm a passionate web developer currently pursuing my studies in web development. I love creating digital experiences that combine functionality with beautiful design.</p>
+                    <p>My journey into web development began with curiosity about how websites work, and has evolved into a deep appreciation for clean code, user experience, and innovative problem-solving.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while sketching out my next big idea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive and visually appealing user interfaces</p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">⚡</div>
+                <h3>Frontend Development</h3>
+                <p>Building responsive and interactive web applications</p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🔧</div>
+                <h3>Backend Development</h3>
+                <p>Developing robust server-side applications and APIs</p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📱</div>
+                <h3>Mobile First</h3>
+                <p>Designing experiences that work seamlessly across all devices</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-link">📧</a>
+            <a href="#" class="social-link">💼</a>
+            <a href="#" class="social-link">🐱</a>
+            <a href="#" class="social-link">🐦</a>
+        </div>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Visitor counter animation
+        function animateCounter() {
+            const counter = document.getElementById('count');
+            const target = 1247;
+            let current = 1000;
+            const increment = Math.ceil((target - current) / 50);
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = current.toLocaleString();
+            }, 50);
+        }
+
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        function setupSmoothScrolling() {
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(animateCounter, 1000);
+            handleScrollAnimations();
+            setupSmoothScrolling();
+        });
+
+        // Add nav background on scroll - removed since nav is now fixed vertically
+        // Navigation is now always visible in a fixed position
+    </script>
 </body>
 </html>
