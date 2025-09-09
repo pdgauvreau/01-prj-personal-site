@@ -283,6 +283,160 @@ h2::after {
     line-height: 1.8;
 }
 
+/* The Fun Section */
+.fun-subsection {
+    margin-bottom: 4rem;
+}
+
+.fun-subsection h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #00ff88;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Songs Grid */
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.song-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.song-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.song-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.song-item iframe {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+}
+
+/* Podcast Section */
+.podcast-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.podcast-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+.podcast-item h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.podcast-item iframe {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
+/* Book Section */
+.book-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+.book-cover img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: scale(1.05);
+}
+
+.book-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00ff88;
+    font-weight: 400;
+}
+
+.book-author {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.book-description {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments for fun section */
+@media (max-width: 768px) {
+    .songs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .podcast-item iframe {
+        height: 250px;
+    }
+    
+    .book-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .book-cover {
+        justify-self: center;
+    }
+}
+
 /* About Me Section */
 .skills-grid {
     display: grid;
