@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #ffffff;
+    background: #fafbfc;
     color: #333333;
     line-height: 1.6;
     overflow-x: hidden;
@@ -17,7 +17,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(250, 251, 252, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
@@ -66,7 +66,7 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #fafbfc 0%, #f5f7fa 100%);
     position: relative;
     overflow: hidden;
 }
@@ -163,7 +163,7 @@ h2::after {
 }
 
 .project-card {
-    background: #ffffff;
+    background: #fdfdfe;
     border: 1px solid #e9ecef;
     border-radius: 15px;
     padding: 2rem;
@@ -246,7 +246,7 @@ h2::after {
 
 /* Bio Section */
 .bio {
-    background: #f8f9fa;
+    background: #f6f8fa;
     border-radius: 20px;
     padding: 3rem;
     margin: 3rem 0;
@@ -305,7 +305,7 @@ h2::after {
 }
 
 .song-item {
-    background: #ffffff;
+    background: #fdfdfe;
     border: 1px solid #e9ecef;
     border-radius: 15px;
     padding: 1.5rem;
