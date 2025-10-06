@@ -447,6 +447,46 @@ h2::after {
     line-height: 1.5;
 }
 
+/* Contact Section */
+.contact-content {
+    background: #f6f8fa;
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem 0;
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.contact-content p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.contact-links li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.contact-links a {
+    color: #4a7c59;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #2c3e30;
+}
+
 /* Responsive adjustments for fun section */
 @media (max-width: 1024px) {
     .songs-grid {
@@ -528,6 +568,7 @@ h2::after {
     gap: 2rem;
     margin-top: 3rem;
 }
+
 /* Footer */
 footer {
     background: #f8f9fa;
