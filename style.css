@@ -207,6 +207,29 @@ h2::after {
     line-height: 1.6;
 }
 
+/* Project Content Wrapper - NEW */
+.project-content-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-image {
+    flex: 2;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -515,6 +538,16 @@ h2::after {
     
     .book-content {
         gap: 1rem;
+    }
+    
+    /* Make project cards stack on mobile */
+    .project-content-wrapper {
+        flex-direction: column;
+    }
+    
+    .project-text,
+    .project-image {
+        flex: 1;
     }
 }
 
