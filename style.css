@@ -571,7 +571,7 @@ h2::after {
     margin-bottom: 1.5rem;
 }
 
-.code-greeting {
+.about-text .code-greeting {
     font-family: 'Courier New', Consolas, Monaco, monospace;
     background: linear-gradient(135deg, #2c3e30 0%, #4a7c59 100%);
     color: #ffffff;
